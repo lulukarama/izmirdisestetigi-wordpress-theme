@@ -1,16 +1,21 @@
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import AppointmentForm from "./AppointmentForm";
+import { useLanguage } from "@/context/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="section-padding">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-dental-purple font-medium mb-2">CONTACT US</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in <span className="gradient-text">Touch</span></h2>
+          <p className="text-dental-purple font-medium mb-2">{t('contactUs')}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="gradient-text">{t('getInTouch')}</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions or ready to schedule your visit? Contact our friendly team today or request an appointment online.
+            {t('contactDescription')}
           </p>
         </div>
         
@@ -18,7 +23,7 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div>
             <div className="bg-white rounded-xl shadow-custom p-6 lg:p-8 mb-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('contactInfo')}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -26,7 +31,7 @@ const ContactSection = () => {
                     <MapPin className="h-6 w-6 text-dental-purple" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Location</h4>
+                    <h4 className="font-semibold text-lg mb-1">{t('location')}</h4>
                     <p className="text-gray-600">
                       123 Dental Care Street<br/>
                       Izmir, Turkey 35000
@@ -39,7 +44,7 @@ const ContactSection = () => {
                     <Phone className="h-6 w-6 text-dental-green" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Phone</h4>
+                    <h4 className="font-semibold text-lg mb-1">{t('phone')}</h4>
                     <p className="text-gray-600">
                       +90 (232) 123-4567<br/>
                       +90 (532) 987-6543
@@ -52,7 +57,7 @@ const ContactSection = () => {
                     <Mail className="h-6 w-6 text-dental-blue" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Email</h4>
+                    <h4 className="font-semibold text-lg mb-1">{t('email')}</h4>
                     <p className="text-gray-600">
                       info@izmirdisestetigi.com<br/>
                       appointments@izmirdisestetigi.com
@@ -65,14 +70,14 @@ const ContactSection = () => {
                     <Clock className="h-6 w-6 text-dental-orange" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Working Hours</h4>
+                    <h4 className="font-semibold text-lg mb-1">{t('workingHours')}</h4>
                     <div className="grid grid-cols-2 gap-2 text-gray-600">
-                      <div>Monday - Friday:</div>
+                      <div>{t('monday')}</div>
                       <div>9:00 AM - 7:00 PM</div>
-                      <div>Saturday:</div>
+                      <div>{t('saturday')}</div>
                       <div>9:00 AM - 5:00 PM</div>
-                      <div>Sunday:</div>
-                      <div>Closed</div>
+                      <div>{t('sunday')}</div>
+                      <div>{t('closed')}</div>
                     </div>
                   </div>
                 </div>

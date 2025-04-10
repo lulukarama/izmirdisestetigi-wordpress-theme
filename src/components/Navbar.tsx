@@ -1,10 +1,12 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Navbar = () => {
+  const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -19,6 +21,10 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'tr' : 'en');
   };
 
   return (
@@ -46,32 +52,52 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
-              Home
+              {t('home')}
             </a>
             <a href="#services" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
-              Services
+              {t('services')}
             </a>
             <a href="#team" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
-              Our Team
+              {t('ourTeam')}
             </a>
             <a href="#testimonials" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
-              Testimonials
+              {t('testimonials')}
             </a>
             <a href="#contact" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
-              Contact
+              {t('contact')}
             </a>
           </div>
 
-          {/* Call Button */}
-          <div className="hidden md:block">
+          {/* Language Switcher & Call Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={toggleLanguage} 
+              className="flex items-center gap-1"
+            >
+              <Globe size={16} />
+              <span>{language === 'en' ? 'TR' : 'EN'}</span>
+            </Button>
+            
             <Button className="bg-dental-purple hover:bg-dental-purple/90 flex items-center gap-2">
               <Phone size={18} />
-              <span>Book Appointment</span>
+              <span>{t('bookAppointment')}</span>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick={toggleLanguage} 
+              className="flex items-center gap-1"
+            >
+              <Globe size={16} />
+              <span>{language === 'en' ? 'TR' : 'EN'}</span>
+            </Button>
+          
             <Button 
               variant="ghost" 
               size="icon"
@@ -91,39 +117,39 @@ const Navbar = () => {
                 className="font-medium text-gray-800 hover:text-dental-purple"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Home
+                {t('home')}
               </a>
               <a 
                 href="#services" 
                 className="font-medium text-gray-800 hover:text-dental-purple"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Services
+                {t('services')}
               </a>
               <a 
                 href="#team" 
                 className="font-medium text-gray-800 hover:text-dental-purple"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Our Team
+                {t('ourTeam')}
               </a>
               <a 
                 href="#testimonials" 
                 className="font-medium text-gray-800 hover:text-dental-purple"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Testimonials
+                {t('testimonials')}
               </a>
               <a 
                 href="#contact" 
                 className="font-medium text-gray-800 hover:text-dental-purple"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
+                {t('contact')}
               </a>
               <Button className="bg-dental-purple hover:bg-dental-purple/90 w-full flex items-center justify-center gap-2">
                 <Phone size={18} />
-                <span>Book Appointment</span>
+                <span>{t('bookAppointment')}</span>
               </Button>
             </div>
           </div>

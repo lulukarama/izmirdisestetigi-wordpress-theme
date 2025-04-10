@@ -4,8 +4,10 @@ import TestimonialCard from "./TestimonialCard";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
 const TestimonialsSection = () => {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const testimonialsRef = useRef<HTMLDivElement>(null);
   
@@ -75,10 +77,12 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="section-padding bg-gray-50 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-dental-purple font-medium mb-2">TESTIMONIALS</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our <span className="gradient-text">Patients Say</span></h2>
+          <p className="text-dental-purple font-medium mb-2">{t('testimonials')}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="gradient-text">{t('testimonialsTitle')}</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Read firsthand accounts from our happy patients about their experiences with our dental services and team.
+            {t('testimonialsDescription')}
           </p>
         </div>
         

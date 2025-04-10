@@ -1,8 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -10,18 +13,18 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="flex flex-col justify-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Your <span className="gradient-text">Beautiful Smile</span> Is Our Priority
+              <span className="gradient-text">{t('heroTitle')}</span>
             </h1>
             <p className="text-lg text-gray-700 mb-8 max-w-lg">
-              Expert dental care with the latest technology for the healthiest smile. Our team provides personalized treatments in a comfortable environment.
+              {t('heroDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-dental-purple hover:bg-dental-purple/90 flex items-center gap-2">
                 <Calendar size={20} />
-                <span>Book Appointment</span>
+                <span>{t('bookAppointment')}</span>
               </Button>
               <Button size="lg" variant="outline" className="flex items-center gap-2">
-                <span>Learn More</span>
+                <span>{t('learnMore')}</span>
                 <ArrowRight size={20} />
               </Button>
             </div>
@@ -30,15 +33,15 @@ const HeroSection = () => {
             <div className="grid grid-cols-3 gap-4 mt-12">
               <div>
                 <div className="text-3xl font-bold text-dental-purple">12+</div>
-                <div className="text-sm text-gray-600">Years of Experience</div>
+                <div className="text-sm text-gray-600">{t('yearsOfExperience')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-dental-orange">5000+</div>
-                <div className="text-sm text-gray-600">Happy Patients</div>
+                <div className="text-sm text-gray-600">{t('happyPatients')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-dental-blue">15+</div>
-                <div className="text-sm text-gray-600">Dental Specialists</div>
+                <div className="text-sm text-gray-600">{t('dentalSpecialists')}</div>
               </div>
             </div>
           </div>
@@ -61,7 +64,7 @@ const HeroSection = () => {
                   <div className="bg-dental-green/20 p-2 rounded-full">
                     <div className="h-3 w-3 bg-dental-green rounded-full"></div>
                   </div>
-                  <p className="font-semibold text-sm">Currently accepting new patients</p>
+                  <p className="font-semibold text-sm">{t('currentlyAccepting')}</p>
                 </div>
               </div>
             </div>

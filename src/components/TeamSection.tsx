@@ -1,7 +1,10 @@
 
 import TeamMember from "./TeamMember";
+import { useLanguage } from "@/context/LanguageContext";
 
 const TeamSection = () => {
+  const { t } = useLanguage();
+  
   const teamMembers = [
     {
       id: 1,
@@ -53,10 +56,12 @@ const TeamSection = () => {
     <section id="team" className="section-padding">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-dental-purple font-medium mb-2">OUR SPECIALISTS</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our <span className="gradient-text">Experienced Team</span></h2>
+          <p className="text-dental-purple font-medium mb-2">{t('ourSpecialists')}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="gradient-text">{t('teamTitle')}</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our team of highly skilled dental professionals is dedicated to providing you with the best care and making your visit comfortable.
+            {t('teamDescription')}
           </p>
         </div>
         
