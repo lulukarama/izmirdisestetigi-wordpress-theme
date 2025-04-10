@@ -1,0 +1,155 @@
+
+import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white pt-16 pb-6">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Logo and About */}
+          <div>
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/83a7815a-a265-4521-b0fc-e92f824f7141.png" 
+                alt="Izmir Diş Estetiği" 
+                className="h-12 w-auto bg-white/10 backdrop-blur-sm p-1 rounded-md"
+              />
+            </div>
+            <p className="text-gray-400 mb-4">
+              Providing quality dental care with a focus on patient comfort and the latest technology for beautiful, healthy smiles.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
+                <Linkedin size={20} />
+              </a>
+            </div>
+          </div>
+          
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#home" className="text-gray-400 hover:text-white transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="text-gray-400 hover:text-white transition-colors">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Our Services</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Teeth Whitening
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Dental Implants
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Cosmetic Dentistry
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Orthodontics
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Oral Surgery
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Preventive Care
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Contact */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <div className="mr-3 mt-1">
+                  <Phone size={18} className="text-dental-orange" />
+                </div>
+                <span className="text-gray-400">+90 (232) 123-4567</span>
+              </li>
+              <li className="flex items-start">
+                <div className="mr-3 mt-1">
+                  <Mail size={18} className="text-dental-orange" />
+                </div>
+                <span className="text-gray-400">info@izmirdisestetigi.com</span>
+              </li>
+            </ul>
+            
+            <div className="mt-6">
+              <Button className="bg-dental-purple hover:bg-dental-purple/90 w-full">
+                Book Appointment
+              </Button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {new Date().getFullYear()} Izmir Diş Estetiği. All rights reserved.
+            </p>
+            <div className="flex space-x-4 text-sm text-gray-400">
+              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
