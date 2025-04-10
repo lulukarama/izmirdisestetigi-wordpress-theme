@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/83a7815a-a265-4521-b0fc-e92f824f7141.png" 
                 alt="Izmir Diş Estetiği" 
-                className="h-12 w-auto bg-white/10 backdrop-blur-sm p-1 rounded-md"
+                className="h-16 w-auto bg-white/10 backdrop-blur-sm p-1 rounded-md"
               />
             </div>
             <p className="text-gray-400 mb-4">
