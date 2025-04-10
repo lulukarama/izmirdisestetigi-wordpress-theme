@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className="mr-2">
               {/* Logo */}
               <a href="#home" className="flex items-center">
-                <img alt="Izmir Diş Estetiği" className="h-12 w-auto object-fill" src="/lovable-uploads/a72fae3d-c8f6-4b2b-8f3b-b25276077645.png" />
+                <img alt="Izmir Diş Estetiği" src="/lovable-uploads/a72fae3d-c8f6-4b2b-8f3b-b25276077645.png" className="h-12 w-auto object-cover" />
               </a>
             </div>
           </div>
