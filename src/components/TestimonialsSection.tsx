@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import TestimonialCard from "./TestimonialCard";
 import { Button } from "@/components/ui/button";
@@ -74,10 +73,10 @@ const TestimonialsSection = () => {
   }, [currentIndex]);
 
   return (
-    <section id="testimonials" className="section-padding bg-gray-50 relative">
+    <section id="testimonials" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-dental-purple font-medium mb-2">{t('testimonials')}</p>
+          <p className="text-dental-purple font-medium mb-2">{t('testimonialsSection')}</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="gradient-text">{t('testimonialsTitle')}</span>
           </h2>

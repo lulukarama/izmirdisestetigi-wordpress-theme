@@ -45,7 +45,7 @@ export const translations = {
     teamDescription: "Our team of highly skilled dental professionals is dedicated to providing you with the best care and making your visit comfortable.",
     
     // Testimonials Section
-    testimonials: "TESTIMONIALS",
+    testimonialsSection: "TESTIMONIALS",
     testimonialsTitle: "What Our Patients Say",
     testimonialsDescription: "Read firsthand accounts from our happy patients about their experiences with our dental services and team.",
     
@@ -128,7 +128,7 @@ export const translations = {
     teamDescription: "Yüksek vasıflı diş hekimlerinden oluşan ekibimiz, size en iyi bakımı sağlamak ve ziyaretinizi konforlu hale getirmek için özveriyle çalışmaktadır.",
     
     // Testimonials Section
-    testimonials: "YORUMLAR",
+    testimonialsSection: "YORUMLAR",
     testimonialsTitle: "Hastalarımız Ne Diyor",
     testimonialsDescription: "Diş hekimliği hizmetlerimiz ve ekibimizle ilgili deneyimleri hakkında hastalarımızın doğrudan hesaplarını okuyun.",
     
