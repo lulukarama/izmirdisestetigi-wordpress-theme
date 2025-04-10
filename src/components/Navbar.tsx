@@ -37,7 +37,7 @@ const Navbar = () => {
                 <img 
                   src="/lovable-uploads/83a7815a-a265-4521-b0fc-e92f824f7141.png" 
                   alt="Izmir Diş Estetiği" 
-                  className="h-12 w-auto"
+                  className="h-16 w-auto" 
                 />
               </a>
             </div>
