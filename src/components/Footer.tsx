@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Youtube, TikTok, Phone, Mail } from "lucide-react";
+import { Facebook, Instagram, Youtube, MessageCircle, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Youtube size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
-                <TikTok size={20} />
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
