@@ -1,13 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-
 const HeroSection = () => {
-  const { t } = useLanguage();
-
-  return (
-    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+  const {
+    t
+  } = useLanguage();
+  return <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Hero Content */}
@@ -52,21 +50,10 @@ const HeroSection = () => {
             <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-dental-orange/20 blur-2xl"></div>
             
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-custom">
-              <img 
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2668&auto=format&fit=crop"
-                alt="Dentist with patient" 
-                className="w-full h-full object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2668&auto=format&fit=crop" alt="Dentist with patient" className="w-full h-full object-cover" />
               
               {/* Accent Elements */}
-              <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg max-w-xs">
-                <div className="flex items-center gap-2">
-                  <div className="bg-dental-green/20 p-2 rounded-full">
-                    <div className="h-3 w-3 bg-dental-green rounded-full"></div>
-                  </div>
-                  <p className="font-semibold text-sm">{t('currentlyAccepting')}</p>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -74,8 +61,6 @@ const HeroSection = () => {
       
       {/* Wave Divider */}
       <div className="wave-divider"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
