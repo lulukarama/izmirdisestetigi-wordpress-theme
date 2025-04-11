@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail } from "lucide-react";
+import { Facebook, Instagram, Youtube, TikTok, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -17,7 +17,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/83a7815a-a265-4521-b0fc-e92f824f7141.png" 
                 alt="Izmir Diş Estetiği" 
-                className="h-16 w-auto brightness-0 invert p-1 rounded-md"
+                className="h-24 w-auto brightness-0 invert p-1 rounded-md"
               />
             </div>
             <p className="text-gray-400 mb-4">
@@ -31,10 +31,10 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
-                <Twitter size={20} />
+                <Youtube size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-dental-orange transition-colors">
-                <Linkedin size={20} />
+                <TikTok size={20} />
               </a>
             </div>
           </div>
