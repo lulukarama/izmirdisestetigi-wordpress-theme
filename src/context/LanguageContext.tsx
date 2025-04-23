@@ -1,3 +1,4 @@
+
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 // Define translations for both languages
@@ -82,6 +83,18 @@ export const translations = {
     latestBlogPosts: "Latest Blog Posts",
     blogSectionDescription: "Stay updated with the latest dental news, tips, and information from our expert team.",
     readMore: "Read More",
+    
+    // Blog Page
+    blogPageTitle: "Dental Care Insights",
+    blogPageSubtitle: "Tips, news, and updates to keep your smile healthy.",
+    search: "Search",
+    searchBlog: "Search blog...",
+    categories: "Categories",
+    recentPosts: "Recent Posts",
+    newsletter: "Subscribe to Our Newsletter",
+    newsletterDescription: "Get the latest dental tips and news delivered to your inbox.",
+    emailPlaceholder: "Your email address",
+    subscribe: "Subscribe",
     
     // Packages Section
     dentalPackages: "Our Dental Packages",
@@ -180,6 +193,18 @@ export const translations = {
     latestBlogPosts: "Son Blog Yazıları",
     blogSectionDescription: "Uzman ekibimizden en son diş haberleri, ipuçları ve bilgilerle güncel kalın.",
     readMore: "Daha Fazla Oku",
+    
+    // Blog Page
+    blogPageTitle: "Diş Bakımı Öngörüleri",
+    blogPageSubtitle: "Gülüşünüzü sağlıklı tutmak için ipuçları, haberler ve güncellemeler.",
+    search: "Ara",
+    searchBlog: "Blog'da ara...",
+    categories: "Kategoriler",
+    recentPosts: "Son Yazılar",
+    newsletter: "Bültenimize Abone Olun",
+    newsletterDescription: "En son diş bakım ipuçları ve haberlerini gelen kutunuza alın.",
+    emailPlaceholder: "E-posta adresiniz",
+    subscribe: "Abone Ol",
     
     // Packages Section
     dentalPackages: "Diş Bakım Paketlerimiz",
