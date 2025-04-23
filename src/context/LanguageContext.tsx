@@ -10,6 +10,7 @@ export const translations = {
     testimonials: "Testimonials",
     contact: "Contact",
     bookAppointment: "Book Appointment",
+    blog: "Blog",
     
     // Hero Section
     heroTitle: "Your Beautiful Smile Is Our Priority",
@@ -107,6 +108,7 @@ export const translations = {
     testimonials: "Yorumlar",
     contact: "İletişim",
     bookAppointment: "Randevu Al",
+    blog: "Blog",
     
     // Hero Section
     heroTitle: "Güzel Gülüşünüz Bizim Önceliğimizdir",
