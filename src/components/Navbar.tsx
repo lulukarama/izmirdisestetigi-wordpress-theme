@@ -1,9 +1,9 @@
-
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Globe } from "lucide-react";
+import { Menu, X, Phone, Globe, Newspaper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/context/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -38,7 +38,6 @@ const Navbar = () => {
         <nav className="flex items-center justify-between">
           <div className="flex items-center">
             <div className="mr-2">
-              {/* Logo */}
               <a href="#home" className="flex items-center">
                 <img 
                   src="/lovable-uploads/83a7815a-a265-4521-b0fc-e92f824f7141.png" 
@@ -49,7 +48,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
               {t('home')}
@@ -66,9 +64,14 @@ const Navbar = () => {
             <a href="#contact" className="font-medium text-gray-800 hover:text-dental-purple transition-colors">
               {t('contact')}
             </a>
+            <Link 
+              to="/blog" 
+              className="font-medium text-gray-800 hover:text-dental-purple transition-colors flex items-center gap-2"
+            >
+              <Newspaper size={16} /> {t('blog')}
+            </Link>
           </div>
 
-          {/* Language Switcher & Call Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Button 
               variant="outline" 
@@ -86,7 +89,6 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <Button 
               variant="outline" 
@@ -108,7 +110,6 @@ const Navbar = () => {
           </div>
         </nav>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 px-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
@@ -147,10 +148,13 @@ const Navbar = () => {
               >
                 {t('contact')}
               </a>
-              <Button className="bg-dental-purple hover:bg-dental-purple/90 w-full flex items-center justify-center gap-2">
-                <Phone size={18} />
-                <span>{t('bookAppointment')}</span>
-              </Button>
+              <Link 
+                to="/blog" 
+                className="font-medium text-gray-800 hover:text-dental-purple flex items-center gap-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Newspaper size={16} /> {t('blog')}
+              </Link>
             </div>
           </div>
         )}
