@@ -1,7 +1,5 @@
 
 import { useEffect } from 'react';
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 
 const BlogPost = () => {
@@ -33,9 +31,7 @@ const BlogPost = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      
+    <>
       <main className="pt-28">
         {/* Hero Image */}
         <div className="w-full h-[400px] relative animate-fade-in opacity-0">
@@ -69,9 +65,7 @@ const BlogPost = () => {
           </div>
         </article>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

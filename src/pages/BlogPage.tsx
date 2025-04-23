@@ -1,8 +1,6 @@
 
 import { useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BlogHero from "@/components/BlogHero";
 import BlogGrid from "@/components/BlogGrid";
 import BlogSidebar from "@/components/BlogSidebar";
@@ -23,9 +21,7 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      
+    <>
       <main className="pt-28 pb-16">
         <BlogHero />
         
@@ -66,9 +62,7 @@ const BlogPage = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
-    </div>
+    </>
   );
 };
 

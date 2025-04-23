@@ -1,12 +1,11 @@
 
 import { useEffect } from "react";
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import TeamSection from "../components/TeamSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
 import BlogSection from "../components/BlogSection";
 import PackagesSection from "../components/PackagesSection";
 
@@ -51,8 +50,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <>
       <HeroSection />
       <ServicesSection />
       <PackagesSection />
@@ -60,8 +58,7 @@ const Index = () => {
       <TestimonialsSection />
       <BlogSection />
       <ContactSection />
-      <Footer />
-    </div>
+    </>
   );
 };
 
