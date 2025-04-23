@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const { t } = useLanguage();
@@ -64,9 +65,11 @@ const BlogSection = () => {
                 <p className="text-gray-600">{post.excerpt}</p>
               </CardContent>
               <CardFooter>
-                <Button variant="ghost" className="text-dental-purple hover:text-dental-purple/90 p-0 flex items-center gap-2">
-                  {t('readMore')} <ArrowRight size={16} />
-                </Button>
+                <Link to={`/blog/${post.id}`}>
+                  <Button variant="ghost" className="text-dental-purple hover:text-dental-purple/90 p-0 flex items-center gap-2">
+                    {t('readMore')} <ArrowRight size={16} />
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}

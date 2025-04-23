@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 

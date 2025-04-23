@@ -78,6 +78,20 @@ export const translations = {
     thankYou: "Thank you!",
     appointmentSuccess: "Your appointment request has been submitted successfully. We'll contact you shortly to confirm your appointment.",
     
+    // Blog Section
+    latestBlogPosts: "Latest Blog Posts",
+    blogSectionDescription: "Stay updated with the latest dental news, tips, and information from our expert team.",
+    readMore: "Read More",
+    
+    // Packages Section
+    dentalPackages: "Our Dental Packages",
+    packagesDescription: "Choose from our range of comprehensive dental care packages designed to meet your specific needs and budget.",
+    bookNow: "Book Now",
+    
+    // Blog Post
+    comments: "Comments",
+    noComments: "No comments yet. Be the first to leave a comment!",
+    
     // Footer
     quickLinks: "Quick Links",
     aboutUs: "About Us",
@@ -160,6 +174,20 @@ export const translations = {
     submitting: "Gönderiliyor...",
     thankYou: "Teşekkürler!",
     appointmentSuccess: "Randevu talebiniz başarıyla gönderildi. Randevunuzu onaylamak için kısa süre içinde sizinle iletişime geçeceğiz.",
+    
+    // Blog Section
+    latestBlogPosts: "Son Blog Yazıları",
+    blogSectionDescription: "Uzman ekibimizden en son diş haberleri, ipuçları ve bilgilerle güncel kalın.",
+    readMore: "Daha Fazla Oku",
+    
+    // Packages Section
+    dentalPackages: "Diş Bakım Paketlerimiz",
+    packagesDescription: "Özel ihtiyaçlarınıza ve bütçenize uygun tasarlanmış kapsamlı diş bakım paketlerimizden seçim yapın.",
+    bookNow: "Hemen Rezervasyon Yap",
+    
+    // Blog Post
+    comments: "Yorumlar",
+    noComments: "Henüz yorum yok. İlk yorumu siz yapın!",
     
     // Footer
     quickLinks: "Hızlı Bağlantılar",
