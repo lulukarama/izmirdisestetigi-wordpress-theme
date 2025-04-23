@@ -7,6 +7,8 @@ import TeamSection from "../components/TeamSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import BlogSection from "../components/BlogSection";
+import PackagesSection from "../components/PackagesSection";
 
 const Index = () => {
   useEffect(() => {
@@ -23,6 +25,29 @@ const Index = () => {
         }
       });
     });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    // Observe all elements with animate-fade-in class
+    document.querySelectorAll('.animate-fade-in').forEach(element => {
+      observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -30,8 +55,10 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <ServicesSection />
+      <PackagesSection />
       <TeamSection />
       <TestimonialsSection />
+      <BlogSection />
       <ContactSection />
       <Footer />
     </div>
