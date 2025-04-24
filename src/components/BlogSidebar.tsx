@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, Calendar, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BlogSidebar = () => {
@@ -11,30 +11,24 @@ const BlogSidebar = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Mock data
-  const categories = [
-    { name: "Dental Technology", count: 5 },
-    { name: "Oral Health", count: 8 },
-    { name: "Cosmetic Dentistry", count: 4 },
-    { name: "Pediatric Dentistry", count: 3 },
-    { name: "Innovation", count: 2 },
-    { name: "Wellness", count: 6 }
-  ];
-
   const recentPosts = [
     {
       id: 1,
       title: "Latest Advances in Dental Implant Technology",
-      date: "2024-04-20"
+      date: "2024-04-20",
+      rating: 4.5
     },
     {
       id: 2,
       title: "Tips for Maintaining Optimal Oral Health",
-      date: "2024-04-18"
+      date: "2024-04-18",
+      rating: 5
     },
     {
       id: 3,
       title: "The Role of AI in Modern Dentistry",
-      date: "2024-04-15"
+      date: "2024-04-15",
+      rating: 4
     }
   ];
 
@@ -68,27 +62,6 @@ const BlogSidebar = () => {
         </CardContent>
       </Card>
 
-      {/* Categories Widget */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl">{t('categories')}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2">
-            {categories.map((category) => (
-              <li key={category.name} className="flex justify-between items-center">
-                <Link to="#" className="text-gray-700 hover:text-dental-purple transition-colors">
-                  {category.name}
-                </Link>
-                <span className="text-sm bg-gray-100 text-gray-600 px-2 rounded-full">
-                  {category.count}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </CardContent>
-      </Card>
-
       {/* Recent Posts Widget */}
       <Card>
         <CardHeader>
@@ -102,7 +75,16 @@ const BlogSidebar = () => {
                   <h4 className="text-sm font-medium text-gray-800 group-hover:text-dental-purple transition-colors">
                     {post.title}
                   </h4>
-                  <span className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</span>
+                  <div className="flex items-center gap-4 mt-1">
+                    <span className="text-xs text-gray-500 flex items-center">
+                      <Calendar size={12} className="mr-1" />
+                      {new Date(post.date).toLocaleDateString()}
+                    </span>
+                    <span className="text-xs text-gray-500 flex items-center">
+                      <Star size={12} className="mr-1" />
+                      {post.rating}
+                    </span>
+                  </div>
                 </Link>
               </li>
             ))}
@@ -128,6 +110,21 @@ const BlogSidebar = () => {
               {t('subscribe')}
             </Button>
           </form>
+        </CardContent>
+      </Card>
+
+      {/* Book Appointment Card */}
+      <Card className="bg-dental-purple text-white">
+        <CardContent className="pt-6">
+          <h3 className="text-xl font-bold mb-2">{t('needDentalCare')}</h3>
+          <p className="text-sm mb-4 text-white/90">{t('bookAppointmentDescription')}</p>
+          <Button 
+            variant="outline" 
+            className="w-full bg-white text-dental-purple hover:bg-white/90"
+          >
+            <Phone className="mr-2" />
+            {t('bookAppointment')}
+          </Button>
         </CardContent>
       </Card>
     </div>
