@@ -1,9 +1,8 @@
-
 import { useEffect, useState } from 'react';
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
-import { Star, WhatsappIcon, Phone } from "lucide-react";
+import { Star, MessageSquare, Phone } from "lucide-react";
 
 const BlogPost = () => {
   const { t } = useLanguage();
@@ -117,7 +116,20 @@ const BlogPost = () => {
               size="lg"
               onClick={() => window.open('https://wa.me/your-number', '_blank')}
             >
-              <WhatsappIcon className="mr-2" />
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="mr-2 h-5 w-5"
+              >
+                <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                <path d="M9 10a.5.5 0 0 1 1 0v4a.5.5 0 0 1-1 0v-4Z" />
+                <path d="M13 9a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 .5-.5Z" />
+              </svg>
               {t('contactWhatsApp')}
             </Button>
           </div>
@@ -136,7 +148,20 @@ const BlogPost = () => {
             className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg"
             onClick={() => window.open('https://wa.me/your-number', '_blank')}
           >
-            <WhatsappIcon size={24} className="text-white" />
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className="h-6 w-6 text-white"
+            >
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+              <path d="M9 10a.5.5 0 0 1 1 0v4a.5.5 0 0 1-1 0v-4Z" />
+              <path d="M13 9a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0v-5a.5.5 0 0 1 .5-.5Z" />
+            </svg>
           </Button>
         </div>
       </main>

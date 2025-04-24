@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Search, Calendar, Star } from "lucide-react";
+import { Search, Calendar, Star, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BlogSidebar = () => {
