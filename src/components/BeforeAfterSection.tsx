@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { Card } from "./ui/card";
 import { AspectRatio } from "./ui/aspect-ratio";
-import { Compare, Eye } from "lucide-react";
+import { Eye, ArrowLeft, ArrowRight } from "lucide-react";
 
 interface BeforeAfterCase {
   id: string;
@@ -59,10 +59,10 @@ const BeforeAfterSection = () => {
         <div className="text-center mb-16 animate-fade-in opacity-0">
           <p className="text-dental-purple font-medium mb-2">{t('transformations')}</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">{t('beforeAfterTitle')}</span>
+            <span className="gradient-text">{t('beforeAfter')}</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            {t('beforeAfterDescription')}
+            {t('beforeAfterDesc')}
           </p>
         </div>
 
@@ -98,7 +98,7 @@ const BeforeAfterSection = () => {
                             />
                           </div>
                           <div className="absolute top-4 left-4 z-20 bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium">
-                            {activeImage === "before" ? t('beforeLabel') : t('afterLabel')}
+                            {activeImage === "before" ? t('before') : t('after')}
                           </div>
                         </AspectRatio>
                         
@@ -110,7 +110,7 @@ const BeforeAfterSection = () => {
                             onClick={() => setActiveImage("before")}
                           >
                             <Eye className="mr-1 h-4 w-4" />
-                            {t('beforeButton')}
+                            {t('before')}
                           </Button>
                           <Button 
                             size="sm" 
@@ -119,7 +119,7 @@ const BeforeAfterSection = () => {
                             onClick={() => setActiveImage("after")}
                           >
                             <Eye className="mr-1 h-4 w-4" />
-                            {t('afterButton')}
+                            {t('after')}
                           </Button>
                         </div>
                       </div>
@@ -143,8 +143,8 @@ const BeforeAfterSection = () => {
         <div className="text-center mt-12 animate-fade-in opacity-0">
           <Button asChild className="bg-gradient-to-r from-dental-purple to-dental-blue hover:from-dental-blue hover:to-dental-purple text-white px-6 py-2">
             <a href="#services">
-              <Compare className="mr-2 h-5 w-5" />
-              {t('viewAllTransformations')}
+              <ArrowRight className="mr-2 h-5 w-5" />
+              {t('viewTransformations')}
             </a>
           </Button>
         </div>
