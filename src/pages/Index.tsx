@@ -8,6 +8,7 @@ import ContactSection from "../components/ContactSection";
 import BlogSection from "../components/BlogSection";
 import PackagesSection from "../components/PackagesSection";
 import InstagramSection from "../components/InstagramSection";
+import BeforeAfterSection from "../components/BeforeAfterSection";
 
 const Index = () => {
   useEffect(() => {
@@ -53,6 +54,7 @@ const Index = () => {
     <>
       <HeroSection />
       <ServicesSection />
+      <BeforeAfterSection />
       <PackagesSection />
       <TeamSection />
       <TestimonialsSection />
