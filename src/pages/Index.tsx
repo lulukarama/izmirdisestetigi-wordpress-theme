@@ -1,6 +1,5 @@
 
 import { useEffect } from "react";
-import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import TeamSection from "../components/TeamSection";
@@ -8,6 +7,7 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 import BlogSection from "../components/BlogSection";
 import PackagesSection from "../components/PackagesSection";
+import InstagramSection from "../components/InstagramSection";
 
 const Index = () => {
   useEffect(() => {
@@ -57,6 +57,7 @@ const Index = () => {
       <TeamSection />
       <TestimonialsSection />
       <BlogSection />
+      <InstagramSection />
       <ContactSection />
     </>
   );
