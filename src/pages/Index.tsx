@@ -1,6 +1,7 @@
 
 import { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
+import AboutUsSection from "../components/AboutUsSection";
 import ServicesSection from "../components/ServicesSection";
 import TeamSection from "../components/TeamSection";
 import TestimonialsSection from "../components/TestimonialsSection";
@@ -52,6 +53,7 @@ const Index = () => {
   return (
     <>
       <HeroSection />
+      <AboutUsSection />
       <ServicesSection />
       <PackagesSection />
       <TeamSection />
