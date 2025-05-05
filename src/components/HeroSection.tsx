@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, ArrowLeft } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -26,6 +25,11 @@ const heroSlides = [
     id: 3,
     image: "https://images.unsplash.com/photo-1606811841346-3f5503b8e0a0?q=80&w=2500&auto=format&fit=crop",
     alt: "Modern dental clinic"
+  },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=5304&auto=format&fit=crop",
+    alt: "Digital dentistry technology"
   }
 ];
 
